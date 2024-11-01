@@ -24,6 +24,8 @@
  */
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2023020800;
+$plugin->version   = 2024110100;
 $plugin->requires  = 2022112800;
 $plugin->component = 'bbbext_bnurl';
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = '1.0';
