@@ -5,12 +5,12 @@ BigBlueButton Extension - BN URL
 
 Overview
 ===========
-The BN URL subplugin enhances the BigBlueButtonBN module by passing additional parameters when a BigBlueButtonBN session is created, joined or both. The parameters can be custom defined, or information from user, course and activity module.
+The BN URL subplugin enhances the BigBlueButtonBN module by passing additional data to BigBlueButton through the URL. This data can be sent when a BigBlueButtonBN session is created, joined or both. Custom defined values or data from user, course and activity module entities can be included.
 
 Features
 ===========
-* **Pass parameters on create and join:** Add extra parameters to create and join action url and pass additional information to BigBlueButton.
-* **Parameter Information Management:** Manage information that teachers can use as a parameter.
+* **Add new parameters to URLs:** Pass extra data from Moodle to BigBlueButton using action URLs.
+* **Manage information that can be sent to BigBlueButton:** Control what Moodle data can be used as a parameter.
 
 Installation
 ============
@@ -53,23 +53,23 @@ Here, admins can enable/disable the subplugin, manage settings, or uninstall it.
 
 Usage
 ============
-Create a new parameter
+Creating New Parameters
 ------------
-From the BigBlueButton activity settings under the ‘Extra parameters’ section, use the ‘Add a new parameter’ button. For each parameter, a name and value must be entered in the corresponding text fields. Teachers can configure whether to pass the parameter when a meeting is created, joined, or for both actions.
+From the BigBlueButton activity settings under the “Extra parameters” section, use the “Add a new parameter” button. For each parameter, a name and value must be entered in the corresponding text fields. Configure when to pass the parameter from the list of options (e.g. pass on Create, Join or both action URLs).
 
-Configure activity module, course and user information as parameters
-------------
-Moodle data can be used for parameter values, provided the Site Administrator has selected the relevant category in the subplugin settings (see Manage information that can be used as a parameter). To use this data, select the desired information from the dropdown list.
-
-Pass custom parameters and meta parameters
+Passing Custom Parameters and Meta parameters
 ------------
 Meta parameters follow the notation `meta_KEY=VALUE`. To pass meta parameters, the `KEY` must be anything that can be a parameter in a standard URL, such as the following:
-* meta_paramname=paramvalue
+* `meta_paramname=paramvalue`
 
 For custom parameters, the following example format is supported:
-* paramname=paramvalue
+* `paramname=paramvalue`
 
-Manage information used as a parameter
+Configuring Moodle Data as Parameters
+------------
+Moodle data can be used for parameter values, provided the Site Administrator has selected the relevant category in the subplugin settings (see Manage information that can be used as a parameter). To use this data, select the desired information from the dropdown list when setting the value in the activity settings.
+
+Managing Information Used as a Parameter
 ------------
 From the subplugin settings, Site Administrators can select data available as parameter values.
 The available categories are:
@@ -79,7 +79,7 @@ The available categories are:
 
 Troubleshooting
 ============
-* Parameters missing when passed: The subplugin supports parameter names that BigBlueButton accepts, which must conform to the pattern `[a-zA-Z][a-zA-Z0-9-]*$` Also note that parameter names containing uppercase will be converted to lowercase by BigBlueButton.
+* **Parameters missing when passed:** The subplugin supports parameter names that BigBlueButton accepts, which must conform to the pattern `[a-zA-Z][a-zA-Z0-9-]*$` Note that parameter names containing uppercase will be converted to lowercase by BigBlueButton.
 
 
 Requirements
