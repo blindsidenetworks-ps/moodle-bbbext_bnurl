@@ -94,6 +94,7 @@ final class utils_test extends \advanced_testcase {
      * Setup
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest();
         $datagenerator = $this->getDataGenerator();
         $this->course = $datagenerator->create_course(['fullname' => 'BBBCourse FULL', 'shortname' => 'BBBCourse']);
