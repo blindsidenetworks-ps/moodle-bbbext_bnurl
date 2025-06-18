@@ -95,7 +95,7 @@ class mod_form_addons extends \mod_bigbluebuttonbn\local\extension\mod_form_addo
         // This is where we can add the data from the bnurl table to the data provided.
         if (!empty($defaultvalues['id'])) {
             $data = $this->retrieve_additional_data(intval($defaultvalues['id']));
-            $defaultvalues = (object) array_merge($defaultvalues, $data);
+            $defaultvalues = array_merge($defaultvalues, $data);
         }
     }
 
